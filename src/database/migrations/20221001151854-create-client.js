@@ -1,7 +1,7 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('cliente', 
+    await queryInterface.createTable('client', 
     { 
       id: {
         type: Sequelize.INTEGER,
@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      telefone:{
+      telephone:{
         type: Sequelize.STRING,
         allowNull: true
       },
@@ -26,6 +26,6 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('cliente');
+    await queryInterface.dropTable('client');
   }
 };

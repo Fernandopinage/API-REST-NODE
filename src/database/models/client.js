@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const database = require('../config/database');
 
-const Cliente = database.define('cliente', {
+const Cliente = database.define('client', {
     name:{
         type: Sequelize.STRING,
         allowNull: false
@@ -10,7 +10,7 @@ const Cliente = database.define('cliente', {
         type: Sequelize.STRING,
         allowNull: false
       },
-      telefone:{
+      telephone:{
         type: Sequelize.STRING(14),
         allowNull: true
       },
