@@ -4,20 +4,20 @@ const  app = express();
 const bodyParser = require('body-parser');
 const consign = require('consign');
 const Port = process.env.PORT || '3000';
-
+const path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 
 consign({
     verbose: false,
-    cwd: 'src'
+    cwd: path.resolve(__dirname,'src')
   }
 )
-  .include('routes')
-  .then('business')
-  .then('controllers')
-  .then('config/services.js')
+  .then('./routes')
+  .then('./business')
+  .then('./controllers')
+  .then('./services.js')
   .into(app);
 
 app.listen(Port,()=>{
