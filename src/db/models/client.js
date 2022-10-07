@@ -1,6 +1,5 @@
 const Sequelize = require('sequelize');
-const database = require('../config/database');
-
+const database = require('../config/db');
 const Client = database.define('client', {
     name: {
         type: Sequelize.STRING,
