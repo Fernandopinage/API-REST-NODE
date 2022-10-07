@@ -1,3 +1,4 @@
+const Client = require('../db/models/client');
 module.exports = {
     async list(req, app) {
 
