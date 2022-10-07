@@ -10,6 +10,8 @@ module.exports.create = (app) =>
 
   async function (req, res) {
 
-    console.log(req.body)
+    const Client = app.business.clienteBusiness;
+
+    const data = await Client.create(req);
 
 };
