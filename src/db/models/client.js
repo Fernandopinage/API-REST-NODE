@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const database = require('../config/db');
-const Client = database.define('client', {
+const Client = database.define('clients', {
     name: {
         type: Sequelize.STRING,
         allowNull: false
@@ -21,6 +21,8 @@ const Client = database.define('client', {
         type: Sequelize.STRING(4),
         allowNull: true
     },
-});
+},{
+    timestamps: false
+  });
 
 module.exports = Client;
