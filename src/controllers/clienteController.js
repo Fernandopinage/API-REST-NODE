@@ -4,7 +4,7 @@ module.exports.list = (app) =>
     
     const Client = app.business.clienteBusiness;
     const data = await Client.list(req,app);
-    console.log(data)
+ 
 
 };
 
