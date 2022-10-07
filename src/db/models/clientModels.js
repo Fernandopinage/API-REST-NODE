@@ -1,27 +1,27 @@
 const Sequelize = require('sequelize');
 const database = require('../config/database');
 
-const Cliente = database.define('client', {
-    name:{
+const Client = database.define('client', {
+    name: {
         type: Sequelize.STRING,
         allowNull: false
-      },
-      password:{
+    },
+    password: {
         type: Sequelize.STRING,
         allowNull: false
-      },
-      telephone:{
-        type: Sequelize.STRING(14),
+    },
+    telephone: {
+        type: Sequelize.STRING,
         allowNull: true
-      },
-      agency:{
+    },
+    agency: {
         type: Sequelize.STRING(6),
         allowNull: true
-      },
-      account:{
+    },
+    account: {
         type: Sequelize.STRING(4),
         allowNull: true
-      },
+    },
 });
 
-module.exports = Cliente;
+module.exports = Client;

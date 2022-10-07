@@ -1,8 +1,10 @@
 module.exports.list = (app) => 
 
   async function (req, res) {
-
-    console.log('aqui')
+    
+    const Client = app.business.clienteBusiness;
+    const data = await Client.list(req,app);
+    console.log(data)
 
 };
 
@@ -12,6 +14,7 @@ module.exports.create = (app) =>
 
     const Client = app.business.clienteBusiness;
 
-    const data = await Client.create(req);
+    const data = await Client.create(req,app);
+    console(data)
 
 };
