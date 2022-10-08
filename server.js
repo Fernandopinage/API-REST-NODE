@@ -14,6 +14,7 @@ consign({cwd: 'src'})
   // .then('/db/models/')
   .then('middlewares')
   .then('routes')
+  .then('./services.js')
   .into(app);
   
 app.listen(Port,()=>{
