@@ -23,6 +23,6 @@ const Client = database.define('clients', {
     },
 },{
     timestamps: false
-  });
+});
 
 module.exports = Client;

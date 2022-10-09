@@ -1,20 +1,20 @@
 module.exports.list = (app) => 
 
-  async function (req, res) {
+    async function (req, res) {
     
-    const Client = app.business.clienteBusiness;
-    const result  = await Client.list(req,app);
-    return res.status(200).send(result)
+        const Client = app.business.clienteBusiness;
+        const result  = await Client.list(req,app);
+        return res.status(200).send(result);
   
 
-};
+    };
 
 module.exports.create = (app) => 
 
-  async function (req, res) {
-    const Client = app.business.clienteBusiness;
+    async function (req, res) {
+        const Client = app.business.clienteBusiness;
 
-    const result = await Client.create(req,app);
-    return res.status(200).send(result)
+        const result = await Client.create(req,app);
+        return res.status(200).send(result);
 
-};
+    };
