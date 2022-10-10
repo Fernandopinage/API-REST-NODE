@@ -11,6 +11,8 @@ module.exports = {
         'ecmaVersion': 'latest'
     },
     'rules': {
+        'eslintno-empty':'true',
+        'no-unused-vars':'off',
         'no-undef':'off',
         'comma-dangle': ['error', 'never'],
         'indent': [

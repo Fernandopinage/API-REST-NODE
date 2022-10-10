@@ -11,8 +11,8 @@ app.use(bodyParser.json());
 consign({cwd: 'src'})
     .then('business')
     .then('controllers')
-// .then('/db/models/')
-    .then('middlewares')
+    // .then('db/')
+    .then('./middlewares')
     .then('routes')
     .then('./services.js')
     .into(app);
