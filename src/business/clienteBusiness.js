@@ -1,4 +1,4 @@
-
+const bcrypt = require('bcrypt');
 module.exports = {
     async list(req, app) {
         const Client = app.services.Client;
@@ -15,7 +15,13 @@ module.exports = {
 
     async create(req, app) {
         const Client = app.services.Client;
-        const data = req.body;
+        const data = {
+            'name': req.body.name,
+            'password': await bcrypt.hash(req.body.password,Number(process.env.SALTROUNDS)),
+            'telephone': req.body.telephone,
+            'agency': req.body.agency,
+            'account':req.body.account
+        };
         try {
             const result = await Client.create(data);
             return { status: true, mensage: 'cadastrado com sucesso', result: result };

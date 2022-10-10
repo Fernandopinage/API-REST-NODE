@@ -12,6 +12,7 @@ module.exports = {
     },
     'rules': {
         'no-undef':'off',
+        'comma-dangle': ['error', 'never'],
         'indent': [
             'error',
             4
@@ -28,5 +29,6 @@ module.exports = {
             'error',
             'always'
         ]
+        
     }
 };
