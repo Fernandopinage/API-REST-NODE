@@ -9,7 +9,6 @@ module.exports.index = (app) =>
     };
 
 module.exports.list = (app) => 
-
     async function (req, res) {
     
         const Client = app.business.clienteBusiness;
@@ -24,7 +23,6 @@ module.exports.list = (app) =>
     };
 
 module.exports.create = (app) => 
-
     async function (req, res) {
 
         const Client = app.business.clienteBusiness;

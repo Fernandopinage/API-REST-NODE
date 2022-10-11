@@ -1,13 +1,15 @@
-const jwt = require('jsonwebtoken');
-module.exports.auth = (app)=>
+var jwt = require('jsonwebtoken');
+module.exports.verifyAuthentication = (app)=>
 
     async function(req,res,next){
-
-        // const Client = app.controllers.clienteController;
-
-        // const client = await  Client.index(app);
-        // console.log(client);
-
-        next();
+        const token = req.headers["authorization"];
+        try {
+            var verifycation = await jwt.verify(token, process.env.SECRET_KEY);
+            if(verifycation){
+                next();
+            }
+        } catch(error) {
+            return error;
+        }
     }
 

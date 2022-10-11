@@ -10,7 +10,7 @@ module.exports = function(app) {
         service.list(app));
 
     app.post('/cliente',
-        secret.auth(app),
+        secret.verifyAuthentication(app),
         service.create(app));
 
 };
