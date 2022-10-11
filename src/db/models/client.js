@@ -21,6 +21,10 @@ const Client = database.define('clients', {
         type: Sequelize.STRING(4),
         allowNull: true
     },
+    key: {
+        type: Sequelize.INTEGER(4),
+        allowNull: false
+    },
 },{
     timestamps: false
 });
